@@ -28,4 +28,7 @@ describe('convertToReversePolishNotation', function () {
     it('handles 2 operations with first of higher precedence', function() {
         convert([1, '*', 2, '+', 3], ops).should.deep.equal([1, 2, '*', 3, '+']);
     });
+    it('handles brackets', function() {
+        convert([1, '*', '(', 2, '+', 3, ')'], ops).should.deep.equal([1, 2, 3, '+', '*']);
+    });
 });
