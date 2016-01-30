@@ -15,7 +15,7 @@ var ops = {
     }
 };
 
-describe('convertToReversePolishNotation', function () {
+describe('calculator convertToRPN', function () {
     it('handles single operation', function() {
         convert([1, '+', 1], ops).should.deep.equal([1, 1, '+']);
     });

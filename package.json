@@ -20,5 +20,8 @@
     "mocha": "~2.4.4",
     "rewire": "^2.5.1",
     "sinon": "~1.17.3"
+  },
+  "dependencies": {
+    "lodash": "^4.1.0"
   }
 }

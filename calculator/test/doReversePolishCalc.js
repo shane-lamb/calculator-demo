@@ -16,7 +16,7 @@ var ops = {
     }
 };
 
-describe('doReversePolishCalc', function () {
+describe('calculator doReversePolishCalc', function () {
     it('handles single operation in correct order', function() {
         doCalc([10, 1, '-'], ops).should.equal(9);
     });

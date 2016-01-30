@@ -1,9 +1,9 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var tokenize = require('../tokenizeInfixNotation');
+var tokenize = require('../tokenizeQueryString');
 
-describe('tokenizeInfixNotation', function () {
+describe('calculator tokenizeQueryString', function () {
     it('tokenizes 1 digit number', function() {
         var result = tokenize("1");
         result.should.deep.equal([1]);
