@@ -8,11 +8,21 @@ module.exports = function(tokens, operators) {
         }
 
         // token is operator
-        var opCalc = operators[token].calc;
+        var op = operators[token];
+        if (!op) {
+            throw Error("Unknown operator: '" + token +"'.");
+        }
         var rightVal = numStack.pop();
         var leftVal = numStack.pop();
-        numStack.push(opCalc(leftVal, rightVal));
+        if (leftVal === undefined) {
+            throw Error("Too many operators supplied.");
+        }
+        numStack.push(op.calc(leftVal, rightVal));
     });
+
+    if (numStack.length !== 1) {
+        throw Error("Not enough operators supplied.");
+    }
 
     return numStack[0];
 };
